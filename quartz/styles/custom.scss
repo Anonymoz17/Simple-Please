@@ -1,5 +1,7 @@
 @use "./base.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 /* ============================================================
    custom.scss — Quartz 4
    Translated from Obsidian Minimal theme + custom snippets:
@@ -171,5 +173,3 @@ article img {
   }
 */
 
-/* Inter from Google Fonts as a web-safe fallback */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
