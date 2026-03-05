@@ -1,3 +1,175 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+/* ============================================================
+   custom.scss — Quartz 4
+   Translated from Obsidian Minimal theme + custom snippets:
+     - headings.css        → H1–H6 typography & colors
+     - grainy-texture.css  → Grain overlay on content
+     - center-images.css   → Centered images
+   
+   NOT translated (Obsidian-app-only, no web equivalent):
+     - heading-labels.css  → Uses .cm-fold-indicator (editor UI)
+     - logo.css            → Uses .mod-left-split sidebar
+     - folder-colors.css   → Uses .nav-files-container sidebar
+   ============================================================ */
+
+
+/* ── Color variables ──────────────────────────────────────── */
+:root {
+  --carmine:       #C23D4E;
+  --near-white:    #DDDAD5;
+  --slate-blue:    #8BA5B5;
+  --warm-taupe:    #8A7E72;
+  --muted-grey:    #6E6E6E;
+  --dark-border:   #3a3a3a;
+  --label-color:   #3a3a3a;
+  --bg-dark:       hsl(0, 0%, 15%);   /* Minimal dark base */
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   HEADINGS — H1 through H6
+   Faithfully matches headings.css colors, fonts, borders
+   ══════════════════════════════════════════════════════════ */
+
+/* ── H1 — Voyage serif, carmine, underline ── */
+h1 {
+  font-family: "Voyage", Georgia, serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  color: var(--carmine) !important;
+  letter-spacing: -0.01em;
+  margin-top: 0.6em;
+  margin-bottom: 0.15em;
+  padding-bottom: 0.1em;
+  border-bottom: 2px solid var(--carmine) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* ── H2 — Voyage serif, near-white, soft underline ── */
+h2 {
+  font-family: "Voyage", Georgia, serif;
+  font-size: 1.7em;
+  font-weight: 400;
+  color: var(--near-white) !important;
+  letter-spacing: -0.01em;
+  margin-top: 0.6em;
+  margin-bottom: 0.15em;
+  padding-bottom: 0.15em;
+  border-bottom: 1px solid var(--dark-border) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* ── H3 — Inter sans, same near-white ── */
+h3 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--near-white) !important;
+  margin-top: 0.6em;
+  margin-bottom: 0.15em;
+  border: none !important;
+}
+
+/* ── H4 — Inter, all-caps, slate blue ── */
+h4 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--slate-blue) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 0.55em;
+  margin-bottom: 0.15em;
+  border: none !important;
+}
+
+/* ── H5 — Inter, all-caps, warm taupe ── */
+h5 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--warm-taupe) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  margin-top: 0.5em;
+  margin-bottom: 0.15em;
+  border: none !important;
+}
+
+/* ── H6 — Inter, italic, muted grey ── */
+h6 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted-grey) !important;
+  letter-spacing: 0.04em;
+  margin-top: 0.45em;
+  margin-bottom: 0.1em;
+  border: none !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   GRAINY TEXTURE — translated from grainy-texture.css
+   Applied to the main article content area in Quartz
+   ══════════════════════════════════════════════════════════ */
+
+/* Quartz wraps page content in article.popover-hint */
+article.popover-hint {
+  position: relative;
+}
+
+article.popover-hint::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.13;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   CENTER IMAGES — translated from center-images.css
+   ══════════════════════════════════════════════════════════ */
+
+article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   FONT IMPORT — load Inter (system fallback is fine for most)
+   Voyage is a paid font; if you have it, add it via @font-face
+   below or reference it from a CDN/self-hosted path.
+   ══════════════════════════════════════════════════════════ */
+
+/*
+  If you have Voyage licensed and self-hosted, add it like this:
+  Place the font files in quartz/static/fonts/ and uncomment:
+
+  @font-face {
+    font-family: "Voyage";
+    src: url("/static/fonts/Voyage.woff2") format("woff2"),
+         url("/static/fonts/Voyage.woff")  format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+*/
+
+/* Inter from Google Fonts as a web-safe fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
