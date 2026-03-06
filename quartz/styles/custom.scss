@@ -28,6 +28,12 @@
   --bg-dark:       hsl(0, 0%, 15%);   /* Minimal dark base */
 }
 
+/* ── Page title (filename) — no underline, bigger ── */
+h1.article-title {
+  font-size: 2.8em;
+  border-bottom: none !important;
+  padding-bottom: 0;
+}
 
 /* ══════════════════════════════════════════════════════════
    HEADINGS — H1 through H6
@@ -163,13 +169,13 @@ article img {
 /*
   If you have Voyage licensed and self-hosted, add it like this:
   Place the font files in quartz/static/fonts/ and uncomment:
-
-  @font-face {
-    font-family: "Voyage";
-    src: url("/static/fonts/Voyage.woff2") format("woff2"),
-         url("/static/fonts/Voyage.woff")  format("woff");
-    font-weight: 400;
-    font-style: normal;
-  }
 */
+
+@font-face {
+font-family: "Voyage";
+src: url("/static/fonts/voyage-bold.woff2") format("woff2"),
+        url("/static/fonts/voyage-bold.woff")  format("woff");
+font-weight: 400;
+font-style: normal;
+}
 

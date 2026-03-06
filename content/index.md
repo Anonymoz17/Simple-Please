@@ -1,5 +1,7 @@
-# This is testing
-
 ---
-*Let's* **Go**!
+title: Simple Please
+---
 
+**Let's keep it simple**
+
+[[IP Address]]
