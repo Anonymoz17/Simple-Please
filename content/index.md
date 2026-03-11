@@ -29,4 +29,4 @@ Start anywhere that interests you, using the explorer on the left sidebar.
 
 > 🌱 _This site is a living document — always growing._
 
-> 🔗 [GitHub](https://github.com/Anonymoz17) · [LinkedIn](https://www.linkedin.com/in/phone-tay-za-luiz-a09402267/)
+> 🔗 [GitHub](https://github.com/Anonymoz17) · [LinkedIn](https://www.linkedin.com/in/phone-tay-za-a09402267/)
