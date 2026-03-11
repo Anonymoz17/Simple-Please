@@ -28,9 +28,20 @@
   --bg-dark:       hsl(0, 0%, 15%);   /* Minimal dark base */
 }
 
+/* ── Site title above search bar ── */
+.quartz-title,
+.quartz-title a {
+  font-family: "Voyage", Georgia, serif !important;
+  font-weight: 700 !important;
+  color: var(--near-white) !important;
+  text-decoration: none !important;
+}
+
 /* ── Page title (filename) — no underline, bigger ── */
 h1.article-title {
+  font-family: "Voyage", Georgia, serif;
   font-size: 2.8em;
+  font-weight: 700;
   border-bottom: none !important;
   padding-bottom: 0;
 }
@@ -44,7 +55,7 @@ h1.article-title {
 h1 {
   font-family: "Voyage", Georgia, serif;
   font-size: 2.2em;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--carmine) !important;
   letter-spacing: -0.01em;
   margin-top: 0.6em;
@@ -60,7 +71,7 @@ h1 {
 h2 {
   font-family: "Voyage", Georgia, serif;
   font-size: 1.7em;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--near-white) !important;
   letter-spacing: -0.01em;
   margin-top: 0.6em;
@@ -172,10 +183,57 @@ article img {
 */
 
 @font-face {
-font-family: "Voyage";
-src: url("/static/fonts/voyage-bold.woff2") format("woff2"),
-        url("/static/fonts/voyage-bold.woff")  format("woff");
-font-weight: 400;
-font-style: normal;
+  font-family: "Voyage";
+  src: url("/static/fonts/voyage-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Voyage";
+  src: url("/static/fonts/voyage-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/static/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/static/fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* 
+  For text fonts
+*/
+
+/* ── Links ── */
+a {
+  color: var(--carmine) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #CB5260 !important;
+}
+
+/* ── Italic ── */
+em {
+  color: var(--slate-blue) !important;
+  font-style: italic;
+}
+
+/* ── Bold ── */
+strong {
+  color: #F4F4F4 !important;
+  font-weight: 700 !important;
+  font-size: 1.05em;        /* slightly larger */
+  letter-spacing: 0.02em;   /* subtle spacing */
+}
